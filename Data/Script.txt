@@ -1,0 +1,22 @@
+We are Group 50 with our Automobile dealership management system Deals on Wheels. This is our database modeled from the ER model and coded using PLSQL. We have used Oracle services in Python to connect the database to a command line and then using Flask, we made a frontend on html/css + javascript that any user who doesnt know DBMS can also use, thus modelling a real car dealership. 
+
+1. Lakshya
+We have modelled the database exactly according to our ER model and relational mapping as you can see. These are our create table commands for the Supplier table, the Employee self-referencing table where contact is constrained as a 10-digit number. The dependent table with a composite primary key, customer table, vehicle inventory table and sales table connecting all of them. This is the Supplier, Customer, Employee, Dependent, Vehicle and Sales data populated into the tables. And this is the whole list of constraints.
+
+2. Utkarsh
+This frontend is connected using Python's Flask library, and Python is connected to SQL using cx_Oracle library - as you can see here. This is the frontend that any employee can use to insert, modify or delete data easily. The above options are for inserting vehicle, sale and customer. Below we have options to modify employee and inventory and delete employees, dependents, vehicles, and sales. There is also a maintenance check button which we will demonstrate later. Let us do the add customer option. I have entered its exact attributes and clicked on register. As you can see, the new customer is added in the backend when we select the table.
+
+3. Khush
+Let us begin with the demonstration of our first procedure. The INSERTVEHICLEINVENTORY procedure inserts multiple lines of data directly into the vehicle inventory table easily through the backend. This is the code for the procedure, now let me bring some lines of data. As you can see, all the inserted lines are visible in the table.
+2nd is the DELETEEMPLOYEE procedure. It is a special procedure that lets us remove an employee record from the employee table using the Employee_ID, but it also checks if the employee still has dependents corresponding in the dependents table. If so, it utilizes the if-else construct to give an error. As you can see, if i try to delete employee 4 who is 'Utkarsh', it prevents me from doing so as his family member is still present. Let me show you that he has a dependent. When we delete this dependent abd execute the procedure again, it will work correctly.
+
+4. Rushi
+The 3rd procedure is a special maintenance check feature of our database that utilizes the for loop. When triggered, it checks for all vehicles older than 5 years by utilizing current date and gives us their details. This lets the user know whatever cars need service and maintenance. As you see once I execute this, we get a list of vehicles needing repair.
+
+Next we will see the 1st trigger that is called upon insert into the sales table. Once an employee makes a sale, entering the vehicle automatically reduces its quantity in the vehicle inventory table. As you see, the quantity of Maruti Swift is 10 but once I insert this sale, the quantity becomes 9 due to the Reduce_Vehicle_Qty trigger.
+
+5. Daksh
+The 2nd trigger is also called when we insert a sale. It tracks the price of the vehicle sold and increases the monthly sales of whichever employee caused that sale by that amount directly in the Employee table. As you see the sale of Utkarsh is 14000 but when I insert this sale, his monthly sale increases.
+The 3rd trigger is a verification before inserting a sale so that employees do not give unwarranted discounts or get extra comission. It makes sure that before a sale is added, its sale price matches the price of the vehicle from the vehicle inventory table. If there is no match, it gives an error and prevents insertion. If I try to sell the Honda City for 1200000 instead of 1000000, the trg_verify_sale_price trigger prevents me from doing so.
+
+We have demonstrated 3 triggers and 3 procedures among many more that we have made for insertion, deletion, updation, checking constraints, etc. Thank you.
