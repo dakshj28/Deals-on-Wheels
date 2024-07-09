@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership Database Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Dealership Database Management</h1>
+        <div class="actions">
+            <a href="{{ url_for('add_supplier') }}" class="action-btn">Add Supplier</a>
+            <!-- Add similar buttons for adding other entities -->
+            <!-- For instance: -->
+            <!-- <a href="{{ url_for('add_supplier') }}" class="action-btn">Add Supplier</a> -->
+            <!-- Add more links for other actions like update and delete -->
+        </div>
+    </div>
+</body>
+</html>

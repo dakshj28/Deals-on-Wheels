@@ -1,0 +1,148 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Lato, "Helvetica Neue";
+  background-color: #f5f5f2;
+  text-align: center;
+  color: #4d4d4d;
+  margin: 3rem;
+}
+
+.face {
+  width: 100%;
+  margin: 3rem auto;
+  max-width: 400px;
+  transition: 0.6s all;
+}
+.face svg {
+  width: 100%;
+  transition: 1.5s all cubic-bezier(0.17, 0.67, 0.03, 1);
+  transform-origin: 50% 100%;
+}
+.form.hidden .face svg {
+  opacity: 0;
+  transform: rotateX(75deg) rotateY(-30deg) translateX(50%) rotateZ(90deg);
+}
+
+.heading {
+  transition: 0.8s all ease 0.1s;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+.form.hidden .heading {
+  transform: translateY(60px);
+  opacity: 0;
+}
+
+.sliding-list {
+  font-size: 2em;
+  height: 1.5em;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  transition: 0.8s all ease 0.2s;
+}
+.form.hidden .sliding-list {
+  transform: translateY(60px);
+  opacity: 0;
+}
+.sliding-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: 0.3s transform;
+  text-align: center;
+}
+.sliding-list li {
+  line-height: 1.5em;
+}
+
+.slider {
+  margin-bottom: 1.5rem;
+}
+
+input[type=range] {
+  -webkit-appearance: none; 
+  width: 300px;
+  background: transparent;
+  transition: 0.8s all ease 0.3s;
+}
+.form.hidden input[type=range] {
+  transform: translateY(60px);
+  opacity: 0;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 26px;
+  background: white;
+  border: 3px solid #4d4d4d;
+  border-radius: 20px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #4d4d4d;
+  cursor: pointer;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #e6e6e6;
+}
+input[type=range]::-moz-range-track {
+  width: 300px;
+  height: 20px;
+  background: white;
+  border: 3px solid #4d4d4d;
+  border-radius: 20px;
+}
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #4d4d4d;
+  cursor: pointer;
+}
+input[type=range]:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+input[type=range]::-ms-track {
+  width: 300px;
+  height: 20px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  outline: none;
+  background: white;
+  border-radius: 20px 0 0 20px;
+}
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #4d4d4d;
+}
+input[type=range]:focus::-ms-track {
+  background: #e6e6e6;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #e6e6e6;
+}
+
+footer {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+}

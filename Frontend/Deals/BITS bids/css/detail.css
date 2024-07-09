@@ -1,0 +1,325 @@
+.container1{
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-image: url('../images/e6c8a187450057c670d55d984dc2424a.jpg');
+    background-size: cover;
+    }
+.product-details{
+    margin: 60px 0 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+body {
+    font-size: 10px; 
+    font-family: 'Young Serif', serif;
+    margin: 0;
+    color: white;
+}
+
+.c-checkbox {
+    display: none;
+
+
+    &:checked + .c-formContainer {
+        margin-left: 80px;
+        .c-form {
+            width: 37.5em;
+        }
+
+        .c-form__toggle {
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0.7);
+        }
+
+        .c-form__input,
+        .c-form__buttonLabel {
+            transition: 0.2s 0.1s;
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &:not(:checked),
+    &:checked {
+        + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before {
+            content: 'Thank You! \1F60A';
+        }
+    }
+
+    &:not(:checked) + .c-formContainer {
+        .c-form__input:required:valid ~ .c-form__toggle {
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+}
+
+.c-formContainer,
+.c-form,
+.c-form__toggle {
+    width: 20em;
+    height: 6.25em;
+}
+
+.c-formContainer {
+    position: relative;
+    font-weight: 700;
+}
+
+.c-form,
+.c-form__toggle {
+    position: absolute;
+    border-radius: 6.25em;
+    background-color: #312a2a;
+    transition: 0.2s;
+}
+
+.c-form {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.625em;
+    box-sizing: border-box;
+    box-shadow: 0 0.125em 0.3125em rgba(#312a2a, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.c-form__toggle {
+    color: #fff7f7;
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        font-size: 1.75em;
+        content: attr(data-title);
+    }
+}
+
+.c-form__input,
+.c-form__button {
+    font: inherit;
+    border: 0;
+    outline: 0;
+    border-radius: 10em;
+    box-sizing: border-box;
+}
+
+.c-form__input,
+.c-form__buttonLabel {
+    font-size: 1.75em;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: 0s;
+}
+
+.c-form__input {
+    color:#312a2a ;
+    height: 100%;
+    width: 100%;
+    padding: 0 0.714em;
+
+    &::placeholder {
+        color: currentColor;
+    }
+
+    &:required:valid {
+        color: #312a2a;
+
+        + .c-form__buttonLabel {
+            color: #312a2a;
+
+            &::before {
+                pointer-events: initial;
+            }
+        }
+    }
+}
+
+.c-form__buttonLabel {
+    color: #312a2a;
+    height: 100%;
+    width: auto;
+    border-radius: 20%;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        cursor: pointer;
+    }
+}
+.c-form__buttonLabel:hover{
+  color: white;
+  background-color: 201e1e;
+}
+
+.c-form__button {
+    color: inherit;
+    padding: 0;
+    height: 100%;
+    width: 5em;
+    background-color: #ffffff;
+   
+}
+.c-form__button:hover{
+    background-color: grey
+   
+}
+.image-slider{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    background-image: url('../images/apple-airpods-pro2-intro 1.jpg');
+    background-size: cover;
+    border: 4px solid white;
+    background-color: white;
+    border-radius: 15%;
+}
+
+.product-images{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100px;
+    grid-gap: 10px;
+    margin: 10px;
+    margin-top: 100px;
+    opacity: 50%;
+}
+.product-images:hover{
+opacity: 100%;
+}
+.small_img{
+    border: 2px solid #383838;
+    border-radius: 20%;
+}
+.product-images img{
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.details{
+    padding-top: 40px;
+    
+    width: 500px;
+}
+.details .product-brand{
+    text-transform: capitalize;
+    font-size: 30px;
+    
+}
+
+.details .product-short-des{
+    font-size: 25px;
+    line-height: 30px;
+    height: auto;
+    margin: 15px 0 30px;
+}
+.detail-des{
+    padding-left: 60px;
+    margin: 0;
+}
+h4{
+    margin: 0;
+    margin-bottom: 0;
+}
+.des{
+    margin: 0;
+}
+.product-price{
+    font-weight: 700;
+    font-size: 30px;
+    margin-left:0 ;
+}
+
+.product-actual-price{
+    font-size: 30px;
+    opacity: 0.5;
+    text-decoration: line-through;
+    margin: 0 20px;
+    font-weight: 300;
+}
+.product-sub-heading{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 60px 0 10px;
+    font-weight: 300;
+}
+
+.size-radio-btn{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #383838;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 0;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: #383838;
+    cursor: pointer;
+}
+
+.btn{
+    width: 40%;
+    padding: 20px;
+    border-radius: 20px;
+    background: none;
+    border: 1px solid #383838;
+    color: #383838;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    text-transform: capitalize;
+    display: block;
+}
+
+.bid-btn{
+    margin-top: 100px;
+    margin-right: 2%;
+    background: #383838;
+    color: #fff;
+}
+.bid-btn:hover{
+    color: black;
+    background-color: white;
+}
+.follow-btn:hover{
+    color: white;
+    background-color: black;
+}
+.detail-des{
+  
+    text-transform: capitalize;
+}
+
+.heading{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.des{
+    color: #383838;
+    line-height: 25px;
+}

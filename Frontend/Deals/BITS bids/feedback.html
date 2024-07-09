@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitsbids</title>
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+  <div class='form hidden'>
+    <div class='face'>
+      <svg viewbox='-10 -10 620 620'>
+        <g id='face' stroke-width='20' stroke='#4d4d4d'>
+          <circle cx='300' cy='300' r='300'></circle>
+        </g>
+        <path d='M100,350 Q300,450 500,350 Q300,550 100,350 z' fill='white' id='mouth' stroke-linejoin='round' stroke-width='20' stroke='#4d4d4d'></path>
+        <g fill='#4d4d4d'>
+          <!-- /%circle{cx: "300", cy: "200", r: "30"} -->
+          <!-- /%circle{cx: "500", cy: "200", r: "30"} -->
+          <path class='eye--left' d='M285 200 a 30 30 0 1 0 -1 0 z' fill='#4d4d4d' stroke-linejoin='round' stroke-width='20' stroke='#4d4d4d'></path>
+          <path class='eye--right' d='M515 200 a 30 30 0 1 0 -1 0 z' fill='#4d4d4d' stroke-linejoin='round' stroke-width='20' stroke='#4d4d4d'></path>
+        </g>
+      </svg>
+    </div>
+    <h3 class='heading'>How do you feel about our customer service?</h3>
+    <div class='sliding-list'>
+      <ul>
+        <li>Absolutely Terrible!</li>
+        <li>Dissapointing</li>
+        <li>Quite Bad hey</li>
+        <li>Not impressed</li>
+        <li>Nothing to be proud of</li>
+        <li>Could have been better</li>
+        <li>Satisfactory</li>
+        <li>Ok, I guess</li>
+        <li>Was Great</li>
+        <li>Super Impressed!</li>
+      </ul>
+    </div>
+    <input class='slider' max='99' min='0' oninput='updateSlider(value)' type='range' value='80'>
+  </div>
+  <footer>
+    <a class='twitter-follow-button' data-show-count='false' href='https://twitter.com/code_dependant'>
+      Follow @code_dependant
+    </a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </footer>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- add_supplier.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Supplier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Add New Supplier</h1>
+    <form method="post">
+        <label for="supplier_id">Supplier ID:</label>
+        <input type="number" id="supplier_id" name="supplier_id" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <input type="submit" value="Add Supplier">
+    </form>
+</body>
+</html>
